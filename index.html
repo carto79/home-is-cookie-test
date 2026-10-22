@@ -370,6 +370,15 @@
       background: var(--bg-parchment);
       box-shadow: var(--shadow-soft);
     }
+    .stage-card-link {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .stage-card-link:hover .stage-card img,
+    .stage-card-link:focus-visible .stage-card img {
+      transform: scale(1.05);
+    }
     .stage-card.main-shot { grid-column: span 2; aspect-ratio: 16 / 10; }
     .stage-card.sub-shot { aspect-ratio: 4 / 4.5; }
     .stage-card img {
@@ -913,27 +922,35 @@
         </div>
 
         <div class="hero-Stage">
-          <figure class="stage-card main-shot">
-            <img src="0 IMG_4239.jpeg" alt="Luxury custom cookies from a premium Ruskin cookie shop" fetchpriority="high"/>
-            <figcaption class="stage-caption">
-              <span>Warm, buttery, bakery-fresh perfection.</span>
-              <b>PREMIUM</b>
-            </figcaption>
-          </figure>
-          <figure class="stage-card sub-shot">
-            <img src="0 IMG_4248.jpeg" alt="Signature Biscoff stuffed cookie from a premium Tampa Bay cookie bakery"/>
-            <figcaption class="stage-caption">
-              <span>Signature Biscoff and caramelized flavor.</span>
-              <b>BESTSELLER</b>
-            </figcaption>
-          </figure>
-          <figure class="stage-card sub-shot">
-            <img src="0 IMG_4594.jpeg" alt="Luxury cookie cake and stuffed cookies by Home is Cookie in Ruskin, Florida"/>
-            <figcaption class="stage-caption">
-              <span>Designed to feel special from the first bite.</span>
-              <b>ARTISANAL</b>
-            </figcaption>
-          </figure>
+          <a class="stage-card-link" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order custom cookies from Home is Cookie">
+            <figure class="stage-card main-shot">
+              <img src="0 IMG_4239.jpeg" alt="Luxury custom cookies from a premium Ruskin cookie shop" fetchpriority="high"/>
+              <figcaption class="stage-caption">
+                <span>Warm, buttery, bakery-fresh perfection.</span>
+                <b>PREMIUM</b>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a class="stage-card-link" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order signature stuffed cookies from Home is Cookie">
+            <figure class="stage-card sub-shot">
+              <img src="0 IMG_4248.jpeg" alt="Signature Biscoff stuffed cookie from a premium Tampa Bay cookie bakery"/>
+              <figcaption class="stage-caption">
+                <span>Signature Biscoff and caramelized flavor.</span>
+                <b>BESTSELLER</b>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a class="stage-card-link" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order a custom cookie cake from Home is Cookie">
+            <figure class="stage-card sub-shot">
+              <img src="0 IMG_4594.jpeg" alt="Luxury cookie cake and stuffed cookies by Home is Cookie in Ruskin, Florida"/>
+              <figcaption class="stage-caption">
+                <span>Designed to feel special from the first bite.</span>
+                <b>ARTISANAL</b>
+              </figcaption>
+            </figure>
+          </a>
         </div>
       </div>
     </section>
