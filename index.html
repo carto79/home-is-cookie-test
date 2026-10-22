@@ -216,9 +216,15 @@
     .hero-Stage {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "main main"
+        "card2 card3";
       gap: 1.25rem;
       align-items: stretch;
     }
+    .stage-card-link:nth-child(1) { grid-area: main; }
+    .stage-card-link:nth-child(2) { grid-area: card2; }
+    .stage-card-link:nth-child(3) { grid-area: card3; }
     .stage-card-link {
       display: block;
       text-decoration: none;
@@ -234,12 +240,12 @@
       height: 100%;
     }
     .stage-card.main-shot {
-      grid-column: 1 / -1;
       aspect-ratio: 16 / 9;
+      min-height: 300px;
     }
     .stage-card.sub-shot {
-      aspect-ratio: 4 / 4.7;
-      min-height: 260px;
+      aspect-ratio: 1 / 1;
+      min-height: 220px;
     }
     .stage-card img {
       width: 100%;
@@ -605,8 +611,12 @@
       }
       .hero-Stage {
         grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "card2"
+          "card3";
       }
-      .stage-card.main-shot { grid-column: auto; }
+      .stage-card.main-shot { aspect-ratio: 16 / 12; }
       .stage-card.sub-shot { aspect-ratio: 16 / 12; }
     }
   </style>
