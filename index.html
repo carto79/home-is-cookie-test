@@ -423,20 +423,22 @@
 
     .cake-showcase {
       display: grid;
-      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
-      gap: 1.75rem;
-      align-items: stretch;
+      grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
       margin-top: 2.5rem;
+      max-width: 980px;
     }
     .cake-feature {
       background: var(--bg-alabaster);
       border: 1px solid var(--border-subtle);
       border-radius: 22px;
-      padding: 1.25rem;
+      padding: 0.8rem;
       overflow: hidden;
       width: 100%;
-      max-width: 420px;
+      max-width: 300px;
       justify-self: start;
+      box-shadow: none;
     }
     .cake-feature a {
       display: block;
@@ -446,7 +448,7 @@
     .cake-feature img {
       width: 100%;
       height: 100%;
-      max-height: 420px;
+      max-height: 290px;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 16px;
@@ -463,35 +465,38 @@
       background: var(--bg-alabaster);
       border: 1px solid var(--border-subtle);
       border-radius: 18px;
-      padding: 1.5rem 1.5rem 0.5rem;
+      padding: 1rem 1rem 0.25rem;
       min-height: 100%;
+      max-width: 560px;
+      width: 100%;
+      justify-self: stretch;
     }
     .cake-matrix summary {
       font-family: var(--font-serif);
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
       list-style: none;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
     .cake-matrix summary::-webkit-details-marker { display: none; }
     .matrix-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1.5rem;
-      font-size: 0.92rem;
+      margin-top: 1rem;
+      font-size: 0.88rem;
     }
     .matrix-table th, .matrix-table td {
-      padding: 0.9rem 1rem;
+      padding: 0.75rem 0.8rem;
       text-align: left;
       border-bottom: 1px solid var(--border-subtle);
     }
     .matrix-table th {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--ink-muted);
@@ -799,7 +804,7 @@
       <div class="hero-grid">
         <div>
           <span class="eyebrow">Premium Cookie Shop in Ruskin, FL</span>
-          <h1 id="hero-title">Luxury cookies for <em>life’s sweetest moments.</em></h1>
+          <h1 id="hero-title">Luxury cookies for <em>sweet moments.</em></h1>
           <p class="hero-lead">Freshly baked cookies for thoughtful gifts, celebrations, and memorable gatherings.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Get on the List</a>
