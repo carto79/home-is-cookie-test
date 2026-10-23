@@ -421,141 +421,6 @@
       letter-spacing: 0.1em;
     }
 
-    .cake-showcase {
-      display: grid;
-      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
-      gap: 1.75rem;
-      align-items: stretch;
-      margin-top: 2.5rem;
-    }
-    .cake-feature {
-      background: var(--bg-alabaster);
-      border: 1px solid var(--border-subtle);
-      border-radius: 22px;
-      padding: 1.25rem;
-      overflow: hidden;
-      width: 100%;
-      max-width: 420px;
-      justify-self: start;
-    }
-    .cake-feature a {
-      display: block;
-      text-decoration: none;
-      height: 100%;
-    }
-    .cake-feature img {
-      width: 100%;
-      height: 100%;
-      max-height: 420px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 16px;
-      display: block;
-      transition: transform 0.25s ease;
-    }
-    .cake-feature a:hover img,
-    .cake-feature a:focus-visible img {
-      transform: translateY(-2px);
-    }
-
-    .cake-matrix {
-      margin-top: 0;
-      background: var(--bg-alabaster);
-      border: 1px solid var(--border-subtle);
-      border-radius: 18px;
-      padding: 1.5rem 1.5rem 0.5rem;
-      min-height: 100%;
-    }
-    .cake-matrix summary {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-      margin-bottom: 0.5rem;
-    }
-    .cake-matrix summary::-webkit-details-marker { display: none; }
-    .matrix-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-      font-size: 0.92rem;
-    }
-    .matrix-table th, .matrix-table td {
-      padding: 0.9rem 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .matrix-table th {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--ink-muted);
-    }
-    .matrix-table td.price-col {
-      font-family: var(--font-mono);
-      color: var(--cobalt-deep);
-      font-weight: 500;
-    }
-
-    .flavor-board {
-      background: var(--cobalt-deep);
-      color: var(--bg-creme);
-      padding: 6rem 0;
-    }
-    .flavor-board .eyebrow { color: var(--gold-brioche); }
-    .flavor-board h2 { color: #fff; }
-    .flavor-board em { color: var(--gold-brioche); }
-    .flavor-columns {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-    @media (min-width: 860px) { .flavor-columns { grid-template-columns: repeat(3, 1fr); } }
-    .flavor-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 18px;
-      padding: 2.25rem;
-    }
-    .flavor-card h3 {
-      font-size: 1.75rem;
-      color: #fff;
-      margin-bottom: 0.35rem;
-    }
-    .flavor-sub {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gold-brioche);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-    .tasting-list { list-style: none; }
-    .tasting-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px dashed rgba(255,255,255,0.14);
-      display: flex;
-      flex-direction: column;
-    }
-    .tasting-list li:last-child { border-bottom: none; }
-    .tasting-name {
-      font-weight: 600;
-      font-size: 0.98rem;
-      color: #fff;
-    }
-    .tasting-note {
-      font-size: 0.82rem;
-      color: rgba(250,246,240,0.68);
-      margin-top: 2px;
-    }
-
     .concierge-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -734,9 +599,6 @@
       .cake-showcase {
         grid-template-columns: 1fr;
       }
-      .cake-feature {
-        max-width: none;
-      }
     }
 
     @media (max-width: 640px) {
@@ -866,22 +728,6 @@
         <article class="menu-item">
           <div class="menu-media">
             <span class="course-num">01</span>
-            <img src="dozen cookies.jpg" alt="Signature petite dozen cookies from a premium custom cookie shop in Ruskin, FL" />
-          </div>
-          <div class="menu-body">
-            <div class="menu-title-row">
-              <h3>Signature Petite Dozen</h3>
-              <span class="menu-price">$18</span>
-            </div>
-            <div class="menu-spec">12 cookies · 1.5 oz each</div>
-            <p class="menu-desc">Classic flavors, baked fresh for gifting, hosting, and memorable moments.</p>
-            <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Order Your Dozen <span>→</span></a>
-          </div>
-        </article>
-
-        <article class="menu-item">
-          <div class="menu-media">
-            <span class="course-num">02</span>
             <img src="Stuffed.jpg" alt="Luxury molten-center stuffed cookies in Ruskin, Florida" />
           </div>
           <div class="menu-body">
@@ -897,7 +743,7 @@
 
         <article class="menu-item">
           <div class="menu-media">
-            <span class="course-num">03</span>
+            <span class="course-num">02</span>
             <img src="Cookie Tray.jpg" alt="Luxury cookie tasting tray for event gifting in Hillsborough County" />
           </div>
           <div class="menu-body">
@@ -908,6 +754,22 @@
             <div class="menu-spec">36 cookies</div>
             <p class="menu-desc">A curated assortment for parties, office celebrations, and beautiful shared moments.</p>
             <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Plan Your Tray <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-media">
+            <span class="course-num">03</span>
+            <img src="0cake.jpg" alt="Custom cookie cake from Home Is Cookie in Ruskin, Florida" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-title-row">
+              <h3>Custom Cookie Cake</h3>
+              <span class="menu-price">From $42</span>
+            </div>
+            <div class="menu-spec">12-inch · 14-inch · 16-inch</div>
+            <p class="menu-desc">A celebratory showpiece with a soft, indulgent center and elegant finish for gatherings big and small.</p>
+            <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Order Your Cake <span>→</span></a>
           </div>
         </article>
 
@@ -926,48 +788,6 @@
             <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Brand Your Batch <span>→</span></a>
           </div>
         </article>
-      </div>
-
-      <div class="cake-showcase">
-        <div class="cake-feature">
-          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order a custom cookie cake from Home is Cookie">
-            <img src="cookie cake.jpg" alt="Custom cookie cake from Home Is Cookie in Ruskin, Florida" />
-          </a>
-        </div>
-
-        <details class="cake-matrix" open>
-          <summary>Cookie cake size guide</summary>
-          <table class="matrix-table" aria-label="Cookie cake pricing chart">
-            <thead>
-              <tr>
-                <th>Size</th>
-                <th>Serves</th>
-                <th>Best For</th>
-                <th class="price-col">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>12-inch</td>
-                <td>8–12</td>
-                <td>Intimate celebrations</td>
-                <td class="price-col">$42</td>
-              </tr>
-              <tr>
-                <td>14-inch</td>
-                <td>12–18</td>
-                <td>Family gatherings</td>
-                <td class="price-col">$58</td>
-              </tr>
-              <tr>
-                <td>16-inch</td>
-                <td>18–24</td>
-                <td>Corporate and large events</td>
-                <td class="price-col">$74</td>
-              </tr>
-            </tbody>
-          </table>
-        </details>
       </div>
     </section>
 
@@ -998,134 +818,131 @@
 
           <article class="flavor-card">
             <h3>Seasonal</h3>
-            <span class="flavor-sub">Limited &amp; celebratory</span>
+            <span class="flavor-sub">Fresh &amp; festive</span>
             <ul class="tasting-list">
-              <li><span class="tasting-name">Lemon Drizzle</span><span class="tasting-note">Citrus brightness with a soft vanilla finish.</span></li>
-              <li><span class="tasting-name">Red Velvet</span><span class="tasting-note">Classic cocoa notes with a cream cheese-inspired finish.</span></li>
-              <li><span class="tasting-name">Pumpkin Spice</span><span class="tasting-note">Warm spice layered with buttery richness.</span></li>
+              <li><span class="tasting-name">Pumpkin Spice</span><span class="tasting-note">Warm holiday spice with soft vanilla undertones.</span></li>
+              <li><span class="tasting-name">Birthday Sprinkle</span><span class="tasting-note">A cheerful classic with buttery vanilla and color.</span></li>
+              <li><span class="tasting-name">Salted Caramel</span><span class="tasting-note">Deep caramel sweetness with a savory finish.</span></li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="corporate" aria-labelledby="corporate-title">
+    <section class="section container" id="corporate">
       <div class="section-header">
         <div>
           <span class="eyebrow">03 / Corporate &amp; Gifting</span>
-          <h2 id="corporate-title">Thoughtful treats for <em>teams and milestones.</em></h2>
+          <h2>Custom treats for <em>client moments.</em></h2>
         </div>
-        <p>From branded cookie boxes to client appreciation moments, every order is designed to feel polished, personal, and memorable.</p>
+        <p>From executive gifting to staff appreciation, every order is designed to feel thoughtful, polished, and memorable.</p>
       </div>
 
       <div class="concierge-grid">
         <div class="logo-pedestal">
-          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Request logo cookies for your brand or event">
-            <img src="0 Logo Home Is Cookie Iced Sugar Cookie.png" alt="Custom edible logo cookies for corporate gifting" />
+          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order custom logo cookies from Home is Cookie">
+            <img src="0 Logo Home Is Cookie Iced Sugar Cookie.png" alt="Home is Cookie custom logo cookie" />
           </a>
-          <p class="eyebrow" style="margin: 0; text-align: center;">Custom brand cookies</p>
         </div>
 
         <div class="sampler-wrap">
-          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Request a corporate cookie sampler">
-            <img src="Sample Spread.jpg" alt="Luxury cookie sampler tray for gifting and events" />
+          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="View sampler options and order a custom cookie tray">
+            <img src="sampleroptions.png" alt="Luxury cookie sampler options and custom tray selections" />
           </a>
         </div>
       </div>
 
       <div class="box-tiers">
         <article class="tier-card">
-          <div class="tier-badge">Starter</div>
           <div class="tier-header">
-            <h3>Mini Box</h3>
-            <span class="tier-price">$32</span>
+            <h3>Deluxe</h3>
+            <span class="tier-price">$28</span>
           </div>
-          <p>Perfect for welcoming new clients or sending a small thoughtful note.</p>
           <ul class="tier-contents">
-            <li>12 assorted cookies</li>
-            <li>Luxury gift wrap</li>
-            <li>Pickup or local delivery</li>
+            <li>12 premium cookies</li>
+            <li>Mix of signature flavors</li>
+            <li>Perfect for gifting</li>
           </ul>
         </article>
 
         <article class="tier-card featured">
-          <div class="tier-badge">Most Loved</div>
+          <span class="tier-badge">Most Popular</span>
           <div class="tier-header">
-            <h3>Signature Box</h3>
-            <span class="tier-price">$58</span>
+            <h3>Celebration</h3>
+            <span class="tier-price">$50</span>
           </div>
-          <p>Our most requested option for events, gifting, and office treats.</p>
           <ul class="tier-contents">
-            <li>24 assorted cookies</li>
-            <li>Curated flavor mix</li>
-            <li>Personalized notes available</li>
+            <li>36 assorted cookies</li>
+            <li>Custom flavors available</li>
+            <li>Ideal for events &amp; hosting</li>
           </ul>
         </article>
 
         <article class="tier-card">
-          <div class="tier-badge">Large</div>
           <div class="tier-header">
-            <h3>Executive Tray</h3>
+            <h3>Signature</h3>
             <span class="tier-price">$90</span>
           </div>
-          <p>Built for larger gatherings, celebrations, and premium client gifting.</p>
           <ul class="tier-contents">
-            <li>36 assorted cookies</li>
-            <li>Mixed premium flavors</li>
-            <li>Priority scheduling</li>
+            <li>Large curated variety</li>
+            <li>Corporate gifting favorite</li>
+            <li>Luxury presentation</li>
           </ul>
         </article>
       </div>
     </section>
 
     <div class="story-banner">
-      <section class="section container" id="about" aria-labelledby="about-title">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">04 / The Baker</span>
-            <h2 id="about-title">Baked with <em>care, craft, and intention.</em></h2>
+      <div class="container">
+        <section class="section" id="about">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">04 / The Baker</span>
+              <h2>Fresh flavor, <em>slow-baked care.</em></h2>
+            </div>
+            <p>Every cookie is baked in small batches with an eye for texture, richness, and beautifully memorable detail.</p>
           </div>
-          <p>Home is Cookie began with a love of warm, thoughtful hospitality and a belief that beautiful desserts should feel as special as the moments they celebrate.</p>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
-    <section class="section container" id="faq" aria-labelledby="faq-title">
+    <section class="section container" id="faq">
       <div class="section-header">
         <div>
           <span class="eyebrow">05 / FAQ</span>
-          <h2 id="faq-title">Everything you need to <em>know before ordering.</em></h2>
+          <h2>Helpful answers for <em>your order.</em></h2>
         </div>
+        <p>Planning a gift, event, or custom batch? Here are the details clients ask most often.</p>
       </div>
 
       <div class="faq-grid">
         <div>
           <div class="insiders-box">
-            <h2>Join the insiders list.</h2>
-            <p>Be first to know about seasonal drops, special trays, and custom-order openings.</p>
-            <a class="btn btn-primary" href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Get on the List</a>
+            <h2>Get on the list.</h2>
+            <p>Be first to hear about new flavor drops, seasonal collections, and limited bake releases.</p>
+            <a class="btn btn-primary" href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Join the Waitlist</a>
           </div>
         </div>
 
         <div>
           <details class="faq-item" open>
             <summary>How far in advance should I order?</summary>
-            <p>Most custom orders are best placed 1–2 weeks in advance, especially for large event trays, logo cookies, and premium gifting boxes.</p>
+            <p>For custom cookie orders, we recommend 7–14 days in advance for the smoothest scheduling. Some seasonal or large-volume requests may need more time.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Do you offer local delivery?</summary>
-            <p>Yes. We service the greater Tampa Bay area with local delivery for many orders and can confirm availability during checkout.</p>
+            <summary>Do you offer delivery?</summary>
+            <p>Yes — we serve the Tampa Bay area, with local pickup and delivery options depending on the order size and timing.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Can I request a custom flavor or design?</summary>
-            <p>Absolutely. We love custom flavor combinations, colors, branding details, and personalized cookie concepts for celebrations and creative gifting moments.</p>
+            <summary>Can I request custom branding or colors?</summary>
+            <p>Absolutely. Our edible logo and custom cookie options are designed for birthdays, launches, gifting, and event moments.</p>
           </details>
 
           <details class="faq-item">
-            <summary>What is the best way to enjoy stuffed cookies?</summary>
-            <p>For peak molten texture, warm at 300°F for 3 minutes or 10 seconds in the microwave before serving. This brings out the soft, decadent center.</p>
+            <summary>What’s your best-selling flavor?</summary>
+            <p>Our Biscoff and Nutella stuffed cookies are two of the most requested favorites, along with the classic chocolate chip.</p>
           </details>
         </div>
       </div>
@@ -1133,20 +950,18 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">Home is Cookie.</div>
-          <p>Luxury custom cookies, stuffed cookies, cookie cakes, and elevated gifting in Ruskin, Florida.</p>
-        </div>
-        <div>
-          <div class="footer-title">Visit</div>
-          <p>Ruskin, FL<br />Serving Tampa Bay and beyond</p>
-        </div>
-        <div>
-          <div class="footer-title">Order</div>
-          <p><a href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Join the waitlist</a><br /><a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Request a custom quote</a></p>
-        </div>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">Home is Cookie</div>
+        <p>Luxury custom cookies, stuffed cookies, cake slices, and gifting moments baked in Ruskin, Florida.</p>
+      </div>
+      <div>
+        <div class="footer-title">Visit</div>
+        <p>Ruskin, FL<br />Tampa Bay delivery</p>
+      </div>
+      <div>
+        <div class="footer-title">Order</div>
+        <p><a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Request a custom quote</a></p>
       </div>
     </div>
   </footer>
