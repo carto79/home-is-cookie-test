@@ -421,28 +421,50 @@
       letter-spacing: 0.1em;
     }
 
-    .cake-feature {
+    .cake-showcase {
+      display: grid;
+      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: stretch;
       margin-top: 2.5rem;
+    }
+    .cake-feature {
       background: var(--bg-alabaster);
       border: 1px solid var(--border-subtle);
       border-radius: 22px;
       padding: 1.25rem;
       overflow: hidden;
+      width: 100%;
+      max-width: 420px;
+      justify-self: start;
+    }
+    .cake-feature a {
+      display: block;
+      text-decoration: none;
+      height: 100%;
     }
     .cake-feature img {
       width: 100%;
-      max-height: 430px;
+      height: 100%;
+      max-height: 420px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 16px;
       display: block;
+      transition: transform 0.25s ease;
+    }
+    .cake-feature a:hover img,
+    .cake-feature a:focus-visible img {
+      transform: translateY(-2px);
     }
 
     .cake-matrix {
-      margin-top: 1.5rem;
+      margin-top: 0;
       background: var(--bg-alabaster);
       border: 1px solid var(--border-subtle);
       border-radius: 18px;
       padding: 1.5rem 1.5rem 0.5rem;
+      min-height: 100%;
     }
     .cake-matrix summary {
       font-family: var(--font-serif);
@@ -708,6 +730,15 @@
       margin-bottom: 0.5rem;
     }
 
+    @media (max-width: 760px) {
+      .cake-showcase {
+        grid-template-columns: 1fr;
+      }
+      .cake-feature {
+        max-width: none;
+      }
+    }
+
     @media (max-width: 640px) {
       .header-inner {
         flex-wrap: wrap;
@@ -897,43 +928,47 @@
         </article>
       </div>
 
-      <div class="cake-feature">
-        <img src="cookie cake.jpg" alt="Custom cookie cake from Home Is Cookie in Ruskin, Florida" />
-      </div>
+      <div class="cake-showcase">
+        <div class="cake-feature">
+          <a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order a custom cookie cake from Home is Cookie">
+            <img src="cookie cake.jpg" alt="Custom cookie cake from Home Is Cookie in Ruskin, Florida" />
+          </a>
+        </div>
 
-      <details class="cake-matrix">
-        <summary>Cookie cake size guide</summary>
-        <table class="matrix-table" aria-label="Cookie cake pricing chart">
-          <thead>
-            <tr>
-              <th>Size</th>
-              <th>Serves</th>
-              <th>Best For</th>
-              <th class="price-col">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>12-inch</td>
-              <td>8–12</td>
-              <td>Intimate celebrations</td>
-              <td class="price-col">$42</td>
-            </tr>
-            <tr>
-              <td>14-inch</td>
-              <td>12–18</td>
-              <td>Family gatherings</td>
-              <td class="price-col">$58</td>
-            </tr>
-            <tr>
-              <td>16-inch</td>
-              <td>18–24</td>
-              <td>Corporate and large events</td>
-              <td class="price-col">$74</td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+        <details class="cake-matrix" open>
+          <summary>Cookie cake size guide</summary>
+          <table class="matrix-table" aria-label="Cookie cake pricing chart">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Serves</th>
+                <th>Best For</th>
+                <th class="price-col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12-inch</td>
+                <td>8–12</td>
+                <td>Intimate celebrations</td>
+                <td class="price-col">$42</td>
+              </tr>
+              <tr>
+                <td>14-inch</td>
+                <td>12–18</td>
+                <td>Family gatherings</td>
+                <td class="price-col">$58</td>
+              </tr>
+              <tr>
+                <td>16-inch</td>
+                <td>18–24</td>
+                <td>Corporate and large events</td>
+                <td class="price-col">$74</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
     </section>
 
     <section class="flavor-board" id="flavors">
@@ -999,87 +1034,98 @@
         </div>
       </div>
 
-      <div class="box-tiers">
-        <article class="tier-card">
-          <div class="tier-header">
-            <h3>Sampler</h3>
-            <span class="tier-price">$10</span>
-          </div>
-          <ul class="tier-contents">
-            <li>1 stuffed cookie</li>
-            <li>4 mini cookies</li>
-            <li>Perfect for tasting</li>
-          </ul>
-        </article>
-
+      <div class="box-tiers" aria-label="Curated gift box options">
         <article class="tier-card featured">
-          <div class="tier-badge">Best Seller</div>
+          <span class="tier-badge">Most Popular</span>
           <div class="tier-header">
-            <h3>Classic</h3>
-            <span class="tier-price">$13</span>
+            <h3>Signature Box</h3>
+            <span class="tier-price">$42</span>
           </div>
-          <ul class="tier-contents">
-            <li>1 stuffed cookie</li>
-            <li>6 mini cookies</li>
-            <li>Gift-ready presentation</li>
-          </ul>
-        </article>
-
-        <article class="tier-card">
-          <div class="tier-header">
-            <h3>Party</h3>
-            <span class="tier-price">$18</span>
-          </div>
+          <p>Thoughtful, balanced, and beautifully packaged for personal gifting.</p>
           <ul class="tier-contents">
             <li>12 assorted cookies</li>
-            <li>Ideal for host gifting</li>
-            <li>Built for gatherings</li>
+            <li>Luxury gifting box</li>
+            <li>Handwritten note included</li>
+          </ul>
+        </article>
+
+        <article class="tier-card">
+          <div class="tier-header">
+            <h3>Host Box</h3>
+            <span class="tier-price">$68</span>
+          </div>
+          <p>For gatherings, hosting moments, and polished entertaining.</p>
+          <ul class="tier-contents">
+            <li>24 mini favorites</li>
+            <li>Signature flavor mix</li>
+            <li>Perfect for parties</li>
+          </ul>
+        </article>
+
+        <article class="tier-card">
+          <div class="tier-header">
+            <h3>Corporate Curated</h3>
+            <span class="tier-price">$120+</span>
+          </div>
+          <p>Elevated gifting experiences for teams, clients, and branded events.</p>
+          <ul class="tier-contents">
+            <li>Custom design options</li>
+            <li>Logo-ready presentation</li>
+            <li>Bulk pricing available</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="story-banner" id="about">
-      <div class="section container">
-        <div class="section-header">
+    <section class="story-banner">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
           <div>
             <span class="eyebrow">04 / The Baker</span>
-            <h2>Meet <em>LaTasha.</em></h2>
+            <h2>Rooted in <em>small-batch care.</em></h2>
           </div>
-          <p>LaTasha bakes every order in small batches with a focus on texture, warmth, and a little extra hospitality.</p>
+          <p>Home is Cookie began as a love letter to elevated homemade baking—crafted with warmth, intention, and flourishes that make every order feel personal.</p>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="faq" aria-labelledby="faq-title">
+    <section class="section container" id="about" aria-labelledby="about-title">
       <div class="section-header">
         <div>
-          <span class="eyebrow">05 / Questions</span>
-          <h2 id="faq-title">Frequently asked <em>questions.</em></h2>
+          <span class="eyebrow">05 / Why guests return</span>
+          <h2 id="about-title">A modern bakery feel with <em>home-baked heart.</em></h2>
         </div>
+        <p>Each batch is made with a focus on texture, flavor balance, and presentation—because the best cookies feel both decadent and memorable.</p>
       </div>
 
-      <div class="faq-grid">
+      <div class="faq-grid" id="faq">
         <div>
           <div class="insiders-box">
-            <h2>Join the list.</h2>
-            <p>Be first to hear about seasonal drops, custom order openings, and special event-only cookie collections.</p>
+            <h2>Join the insiders list.</h2>
+            <p>Be first to hear about seasonal flavors, limited drops, and gifting windows when they open.</p>
             <a class="btn btn-primary" href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Get on the List</a>
           </div>
         </div>
 
         <div>
           <details class="faq-item" open>
-            <summary>Where are you located and where do you deliver?</summary>
-            <p>Home is Cookie is a premium custom cookie shop in Ruskin, Florida, serving Hillsborough County and nearby Tampa Bay neighborhoods including Brandon, Riverview, Wimauma, and Valrico.</p>
+            <summary>What’s the best seller?</summary>
+            <p>Our stuffed cookies and Biscoff creations are fan favorites, especially when served warm for that fresh-from-the-bake texture.</p>
           </details>
+
           <details class="faq-item">
-            <summary>Do you offer custom corporate gifting and edible logo cookies?</summary>
-            <p>Yes. We design premium edible logo cookies, custom cookie gift boxes, and celebration treats for corporate gifting, client appreciation, and special events.</p>
+            <summary>Do you offer custom branded cookies?</summary>
+            <p>Yes. We can create personalized colors, flavors, and logo-inspired designs for corporate gifting and special events.</p>
           </details>
+
           <details class="faq-item">
-            <summary>What are the minimum order quantities?</summary>
-            <p>Signature petite dozens are $18 per dozen. Molten-center stuffed cookies are $4 each with a 6-cookie minimum. Custom edible logo cookies are $5 each with a 12-cookie minimum.</p>
+            <summary>Can I order for a party or event?</summary>
+            <p>Absolutely. Our tasting trays, cookie cakes, and custom assortments are built for celebrations, office treats, and family gatherings.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How far do you deliver?</summary>
+            <p>We serve Ruskin and surrounding Tampa Bay areas, with a focus on fresh pickup and local delivery in the greater Hillsborough County area.</p>
           </details>
         </div>
       </div>
@@ -1091,17 +1137,15 @@
       <div class="footer-grid">
         <div>
           <div class="footer-title">Home is Cookie.</div>
-          <p>Luxury custom cookies for celebrations, gifting, and life’s sweetest moments in Ruskin, Florida.</p>
+          <p>Luxury custom cookies, stuffed cookies, and cookie cakes baked to order in Ruskin, Florida.</p>
         </div>
         <div>
           <div class="footer-title">Visit</div>
-          <p>Ruskin, FL</p>
-          <p>Homeiscookie@gmail.com</p>
+          <p>Ruskin, FL<br />Serving Tampa Bay</p>
         </div>
         <div>
           <div class="footer-title">Order</div>
-          <p><a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Custom Quote</a></p>
-          <p><a href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Get on the List</a></p>
+          <p><a href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Request a quote</a><br /><a href="https://home-is-cookie.kit.com/5d7463e261" target="_blank" rel="noopener">Get on the list</a></p>
         </div>
       </div>
     </div>
