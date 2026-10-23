@@ -479,6 +479,20 @@
       transform: translateY(-4px);
       box-shadow: 0 22px 44px -16px rgba(15, 41, 82, 0.14);
     }
+    .menu-card-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+    .menu-card-link:focus-visible {
+      outline: 2px solid var(--cobalt-signature);
+      outline-offset: 3px;
+    }
+    .menu-card-link:hover .menu-title-row h3,
+    .menu-card-link:focus-visible .menu-title-row h3 {
+      color: var(--cobalt-signature);
+    }
     .menu-media {
       position: relative;
       aspect-ratio: 1 / 1;
@@ -933,22 +947,6 @@
       <div class="menu-grid">
         <article class="menu-item">
           <div class="menu-media">
-            <span class="course-num">01</span>
-            <img src="dozen cookies.jpg" alt="Signature petite dozen cookies from a premium custom cookie shop in Ruskin, FL"/>
-          </div>
-          <div class="menu-body">
-            <div class="menu-title-row">
-              <h3>Signature Petite Dozen</h3>
-              <span class="menu-price">$18</span>
-            </div>
-            <div class="menu-spec">12 cookies · 1.5 oz each</div>
-            <p class="menu-desc">Classic and nostalgic flavors baked fresh for elevated gifting, hosting, and memorable moments.</p>
-            <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Order Your Dozen <span>→</span></a>
-          </div>
-        </article>
-
-        <article class="menu-item">
-          <div class="menu-media">
             <span class="course-num">02</span>
             <img src="Stuffed.jpg" alt="Luxury molten-center stuffed cookies in Ruskin, Florida"/>
           </div>
@@ -977,6 +975,24 @@
             <p class="menu-desc">A curated cookie assortment for parties, office celebrations, and beautifully shared moments.</p>
             <a class="menu-cta" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener">Plan Your Tray <span>→</span></a>
           </div>
+        </article>
+
+        <article class="menu-item">
+          <a class="menu-card-link" href="https://form.jotform.com/jtaitt/home-is-cookie-order-form" target="_blank" rel="noopener" aria-label="Order a custom cookie cake from Home is Cookie">
+            <div class="menu-media">
+              <span class="course-num">03</span>
+              <img src="0cake.jpg" alt="Cookie cake card for custom celebration orders from Home is Cookie"/>
+            </div>
+            <div class="menu-body">
+              <div class="menu-title-row">
+                <h3>Cookie Cake</h3>
+                <span class="menu-price">Custom</span>
+              </div>
+              <div class="menu-spec">Celebration ready · custom design</div>
+              <p class="menu-desc">A showstopping cookie cake for birthdays, milestones, office parties, and unforgettable gatherings.</p>
+              <span class="menu-cta">Order Your Cake <span>→</span></span>
+            </div>
+          </a>
         </article>
 
         <article class="menu-item">
@@ -1010,19 +1026,19 @@
           <tbody>
             <tr>
               <td>12-inch</td>
-              <td>8–12</td>
+              <td>12</td>
               <td>Intimate celebrations</td>
               <td class="price-col">$42</td>
             </tr>
             <tr>
               <td>14-inch</td>
-              <td>12–18</td>
+              <td>18</td>
               <td>Family gatherings</td>
               <td class="price-col">$58</td>
             </tr>
             <tr>
               <td>16-inch</td>
-              <td>18–24</td>
+              <td>24</td>
               <td>Corporate and large events</td>
               <td class="price-col">$74</td>
             </tr>
@@ -1089,15 +1105,13 @@
       </div>
     </section>
 
-    <section class="story-banner" id="about">
-      <div class="section container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">04 / The Baker</span>
-            <h2>Meet <em>LaTasha.</em></h2>
-          </div>
-          <p>LaTasha bakes every order in small batches with a focus on texture, warmth, and a little extra hospitality.</p>
+    <section class="section container" id="about">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">04 / The Baker</span>
+          <h2>Meet <em>LaTasha.</em></h2>
         </div>
+        <p>LaTasha bakes every order in small batches with a focus on texture, warmth, and a little extra hospitality.</p>
       </div>
     </section>
 
