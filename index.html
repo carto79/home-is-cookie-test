@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-creme: #FAF6F0;
@@ -337,7 +338,6 @@
     }
     @media (min-width: 640px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .menu-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; } }
-
     .menu-item {
       display: flex;
       flex-direction: column;
@@ -456,12 +456,18 @@
       border-radius: 20px;
       padding: 2rem;
       text-align: center;
+      min-height: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .sampler-wrap a {
       display: block;
       width: 100%;
       text-decoration: none;
       cursor: pointer;
+      height: 100%;
     }
     .sampler-wrap img {
       max-width: 880px;
@@ -850,45 +856,6 @@
             <img src="sampleroptions.png" alt="Luxury cookie sampler options and custom tray selections" />
           </a>
         </div>
-      </div>
-
-      <div class="box-tiers">
-        <article class="tier-card">
-          <div class="tier-header">
-            <h3>Deluxe</h3>
-            <span class="tier-price">$28</span>
-          </div>
-          <ul class="tier-contents">
-            <li>12 premium cookies</li>
-            <li>Mix of signature flavors</li>
-            <li>Perfect for gifting</li>
-          </ul>
-        </article>
-
-        <article class="tier-card featured">
-          <span class="tier-badge">Most Popular</span>
-          <div class="tier-header">
-            <h3>Celebration</h3>
-            <span class="tier-price">$50</span>
-          </div>
-          <ul class="tier-contents">
-            <li>36 assorted cookies</li>
-            <li>Custom flavors available</li>
-            <li>Ideal for events &amp; hosting</li>
-          </ul>
-        </article>
-
-        <article class="tier-card">
-          <div class="tier-header">
-            <h3>Signature</h3>
-            <span class="tier-price">$90</span>
-          </div>
-          <ul class="tier-contents">
-            <li>Large curated variety</li>
-            <li>Corporate gifting favorite</li>
-            <li>Luxury presentation</li>
-          </ul>
-        </article>
       </div>
     </section>
 
