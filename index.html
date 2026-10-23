@@ -421,6 +421,119 @@
       letter-spacing: 0.1em;
     }
 
+    .cake-feature {
+      margin-top: 2.5rem;
+      background: var(--bg-alabaster);
+      border: 1px solid var(--border-subtle);
+      border-radius: 22px;
+      padding: 1.25rem;
+      overflow: hidden;
+    }
+    .cake-feature img {
+      width: 100%;
+      max-height: 430px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .cake-matrix {
+      margin-top: 1.5rem;
+      background: var(--bg-alabaster);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 1.5rem 1.5rem 0.5rem;
+    }
+    .cake-matrix summary {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin-bottom: 0.5rem;
+    }
+    .cake-matrix summary::-webkit-details-marker { display: none; }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      font-size: 0.92rem;
+    }
+    .matrix-table th, .matrix-table td {
+      padding: 0.9rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .matrix-table th {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-muted);
+    }
+    .matrix-table td.price-col {
+      font-family: var(--font-mono);
+      color: var(--cobalt-deep);
+      font-weight: 500;
+    }
+
+    .flavor-board {
+      background: var(--cobalt-deep);
+      color: var(--bg-creme);
+      padding: 6rem 0;
+    }
+    .flavor-board .eyebrow { color: var(--gold-brioche); }
+    .flavor-board h2 { color: #fff; }
+    .flavor-board em { color: var(--gold-brioche); }
+    .flavor-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 860px) { .flavor-columns { grid-template-columns: repeat(3, 1fr); } }
+    .flavor-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 2.25rem;
+    }
+    .flavor-card h3 {
+      font-size: 1.75rem;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+    .flavor-sub {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-brioche);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .tasting-list { list-style: none; }
+    .tasting-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.14);
+      display: flex;
+      flex-direction: column;
+    }
+    .tasting-list li:last-child { border-bottom: none; }
+    .tasting-name {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: #fff;
+    }
+    .tasting-note {
+      font-size: 0.82rem;
+      color: rgba(250,246,240,0.68);
+      margin-top: 2px;
+    }
+
     .concierge-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -530,6 +643,12 @@
       font-size: 0.92rem;
     }
     .tier-contents li { margin: 0.35rem 0; }
+
+    .story-banner {
+      background: var(--bg-parchment);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
 
     .faq-grid {
       display: grid;
@@ -777,6 +896,82 @@
           </div>
         </article>
       </div>
+
+      <div class="cake-feature">
+        <img src="cookie cake.jpg" alt="Custom cookie cake from Home Is Cookie in Ruskin, Florida" />
+      </div>
+
+      <details class="cake-matrix">
+        <summary>Cookie cake size guide</summary>
+        <table class="matrix-table" aria-label="Cookie cake pricing chart">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Serves</th>
+              <th>Best For</th>
+              <th class="price-col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12-inch</td>
+              <td>8–12</td>
+              <td>Intimate celebrations</td>
+              <td class="price-col">$42</td>
+            </tr>
+            <tr>
+              <td>14-inch</td>
+              <td>12–18</td>
+              <td>Family gatherings</td>
+              <td class="price-col">$58</td>
+            </tr>
+            <tr>
+              <td>16-inch</td>
+              <td>18–24</td>
+              <td>Corporate and large events</td>
+              <td class="price-col">$74</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </section>
+
+    <section class="flavor-board" id="flavors">
+      <div class="container">
+        <span class="eyebrow">02 / Signature Flavor Collection</span>
+        <h2>Luxury flavors with a <em>beautifully indulgent finish.</em></h2>
+        <div class="flavor-columns">
+          <article class="flavor-card">
+            <h3>Classics</h3>
+            <span class="flavor-sub">Comfort &amp; nostalgia</span>
+            <ul class="tasting-list">
+              <li><span class="tasting-name">Chocolate Chip</span><span class="tasting-note">Brown butter edges and a soft, golden center.</span></li>
+              <li><span class="tasting-name">Sugar Cookie</span><span class="tasting-note">Vanilla bean sweetness with bakery-level softness.</span></li>
+              <li><span class="tasting-name">Snickerdoodle</span><span class="tasting-note">Warm cinnamon sugar and a nostalgic, chewy finish.</span></li>
+            </ul>
+          </article>
+
+          <article class="flavor-card">
+            <h3>Signature</h3>
+            <span class="flavor-sub">Bold &amp; elevated</span>
+            <ul class="tasting-list">
+              <li><span class="tasting-name">Biscoff</span><span class="tasting-note">Caramelized cookie butter richness with a buttery texture.</span></li>
+              <li><span class="tasting-name">Nutella Stuffed</span><span class="tasting-note">A rich, molten center wrapped in a soft thick shell.</span></li>
+              <li><span class="tasting-name">Rocky Road</span><span class="tasting-note">Chocolate depth, marshmallow notes, and crunch.</span></li>
+            </ul>
+          </article>
+
+          <article class="flavor-card">
+            <h3>Seasonal</h3>
+            <span class="flavor-sub">Celebration ready</span>
+            <ul class="tasting-list">
+              <li><span class="tasting-name">Birthday Sprinkle</span><span class="tasting-note">Fun, joyful, and crafted for special events.</span></li>
+              <li><span class="tasting-name">Cookie Butter</span><span class="tasting-note">Deep caramel spice with a silky toasted finish.</span></li>
+              <li><span class="tasting-name">Bespoke Custom</span><span class="tasting-note">Flavor, color, and branding built around your moment.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section container" id="corporate" aria-labelledby="corporate-title">
@@ -841,6 +1036,18 @@
             <li>Built for gatherings</li>
           </ul>
         </article>
+      </div>
+    </section>
+
+    <section class="story-banner" id="about">
+      <div class="section container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">04 / The Baker</span>
+            <h2>Meet <em>LaTasha.</em></h2>
+          </div>
+          <p>LaTasha bakes every order in small batches with a focus on texture, warmth, and a little extra hospitality.</p>
+        </div>
       </div>
     </section>
 
