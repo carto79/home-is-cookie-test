@@ -1,0 +1,5 @@
+---
+import {faqs as all} from '../data/site.js';
+const {items=all}=Astro.props;
+---
+<div class="faq-list">{items.map(([q,a])=><details><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div>

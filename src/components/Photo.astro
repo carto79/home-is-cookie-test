@@ -1,0 +1,5 @@
+---
+const {src,alt,priority=false,class:className='',caption,width=1200,height=1200}=Astro.props;
+const responsive=['hero','classic','stuffed','tray','cake','sandwich','grogu-kitchen'].includes(src);
+---
+<figure class={className}><img src={'/assets/'+src+'.webp'} srcset={responsive?`/assets/${src}-640.webp 640w, /assets/${src}.webp 1200w`:undefined} sizes="(max-width: 700px) 100vw, 50vw" alt={alt} width={width} height={height} loading={priority?'eager':'lazy'} fetchpriority={priority?'high':'auto'}/>{caption&&<figcaption>{caption}</figcaption>}</figure>

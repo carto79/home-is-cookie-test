@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Photo from '../components/Photo.astro';
+import Boxes from '../components/Boxes.astro';
+import Steps from '../components/Steps.astro';
+import FAQ from '../components/FAQ.astro';
+import {faqs,gallery,cakes,stuffed} from '../data/site.js';
+const previewFaqs=[faqs[2],faqs[3],faqs[5],faqs[7],faqs[8]];
+---
+<Layout title="Custom Cookies in Ruskin, FL | Home is Cookie" description="Scratch-made cookies, corporate gifts, and logo cookies from Ruskin, FL. Explore flavors, box prices, and Sun City Center delivery." faqs={previewFaqs}>
+<section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Made from scratch in Ruskin, FL</span>
+            <h1 id="hero-title">Cookies worth <em>making room for.</em></h1>
+            <p class="hero-lead">
+              Made from scratch in Ruskin, Florida. Cookies for everyday treats, thoughtful gifts, and company moments—with local delivery to Sun City Center and selected Hillsborough County areas.
+            </p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="https://pci.jotform.com/form/231086273990158">Order cookies</a>
+              <a class="btn btn-outline" href="/corporate-gifts/">Corporate gifts & logo cookies</a>
+            </div>
+            <div class="hero-meta">
+              <span>Baked to order</span>
+              <span>Ruskin pickup by arrangement</span>
+              <span>Delivery confirmed before payment</span>
+            </div>
+          </div>
+
+          <div class="hero-Stage">
+            <figure class="stage-card main-shot">
+              <img src="/assets/hero-batch.webp" srcset="/assets/hero-batch-640.webp 640w, /assets/hero-batch.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" alt="Freshly baked chocolate chip cookies arranged across parchment-lined trays" width="1600" height="1200" fetchpriority="high"/>
+              <figcaption class="stage-caption">
+                <span>Made from scratch. Made to share.</span>
+                <b>BAKED TO ORDER</b>
+              </figcaption>
+            </figure>
+            <figure class="stage-card sub-shot">
+              <img src="/assets/biscoff.webp" alt="Cookies topped with Biscoff biscuits on a cooling rack" width="1200" height="1200" loading="lazy"/>
+              <figcaption class="stage-caption">
+                <span>Something good in every batch.</span>
+                <b>STUFFED COOKIES</b>
+              </figcaption>
+            </figure>
+            <figure class="stage-card sub-shot">
+              <img src="/assets/logo-cookie.webp" alt="Home is Cookie logo printed on a white iced cookie" width="1200" height="1200" loading="lazy"/>
+              <figcaption class="stage-caption">
+                <span>Your logo. A cookie they’ll remember.</span>
+                <b>MADE PERSONAL</b>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+<div class="ritual-strip"><div class="container ritual-inner"><span class="ritual-title">From our kitchen to your occasion.</span><span class="ritual-steps">CHOOSE YOUR COOKIES · CONFIRM THE DETAILS · RESERVE YOUR ORDER</span></div></div>
+<section class="section container" id="corporate" aria-labelledby="corporate-title"><div class="section-header"><div><span class="eyebrow">01 / Corporate gifting</span><h2 id="corporate-title">A thoughtful thank-you, <em>with your name on it.</em></h2></div><p>Give clients, colleagues, and event guests something made for them. Choose corporate cookie boxes or print your company logo, photograph, or artwork on cookies baked from scratch.</p></div><div class="concierge-grid"><a class="logo-pedestal" href="/logo-cookies/" aria-label="Explore logo and photo cookies"><img src="/assets/logo-cookie.webp" width="1200" height="1185" loading="lazy" alt="Home is Cookie logo printed on an iced cookie"/></a><figure class="sampler-wrap"><div class="flyer-window"><img src="/assets/sampler-menu.webp" width="1024" height="1536" loading="lazy" alt="Illustrated menu comparing Sampler, Classic, and Party corporate cookie boxes"/></div><figcaption>Menu illustration. Box contents are listed below; final presentation is confirmed with your order.</figcaption></figure></div><div class="corporate-details"><div><h3>Your logo. A cookie they’ll remember.</h3><p>Logo and photo cookies are $5 each with a 12-cookie minimum. Printing and artwork setup are included. Send the highest-resolution original file available.</p><a class="text-link" href="/logo-cookies/">See logo & photo cookies →</a></div><div><h3>Choose your corporate cookie box</h3><p>Every box contains one stuffed cookie and mini cookies. Standard packaging is included.</p></div></div><Boxes/><div class="button-row corporate-actions"><a class="btn btn-primary" href="/order/?type=corporate">Request a corporate quote</a><a class="btn btn-outline" href="/corporate-gifts/">Compare boxes & plan quantities</a></div><p class="small">Tell us your date, quantity, and delivery location. We’ll confirm the details before payment.</p></section>
+<section class="section container" id="menu" aria-labelledby="menu-title"><div class="section-header"><div><span class="eyebrow">02 / Signature menu</span><h2 id="menu-title">For the table. For a friend. <em>For you.</em></h2></div><p>Bring homemade cookies to your next coffee catch-up, family visit, or get-together. Explore classic flavors, filled cookies, and trays made for sharing.</p></div><div class="menu-grid"><article class="menu-item"><div class="menu-media"><span class="course-num">01</span><img src="/assets/tray.webp" alt="Assorted cookies arranged in three rows on a tray" width="1200" height="1200" loading="lazy"/></div><div class="menu-body"><div class="menu-title-row"><h3>Three-Dozen Tray</h3><span class="menu-price">$50</span></div><div class="menu-spec">36 cookies per tray</div><p class="menu-desc">Bring homemade cookies to your next coffee catch-up, family visit, or get-together.</p><a class="menu-cta" href="/cookies/#sharing">Order a sharing tray <span aria-hidden="true">→</span></a></div></article><article class="menu-item"><div class="menu-media"><span class="course-num">02</span><img src="/assets/stuffed.webp" alt="Stuffed cookie broken open to show chocolate filling" width="1200" height="1200" loading="lazy"/></div><div class="menu-body"><div class="menu-title-row"><h3>Stuffed Cookies</h3><span class="menu-price">$5 each</span></div><div class="menu-spec">Minimum 6 · six for $30</div><p class="menu-desc">Three filled-cookie choices, baked to order. Twelve cookies are $60 when you want more to share.</p><a class="menu-cta" href="/stuffed-cookies/">Choose stuffed cookies <span aria-hidden="true">→</span></a></div></article><article class="menu-item"><div class="menu-media"><span class="course-num">03</span><img src="/assets/sandwich.webp" srcset="/assets/sandwich-640.webp 640w, /assets/sandwich.webp 1200w" sizes="(max-width: 700px) 100vw, 25vw" alt="Chocolate chip sandwich cookies with vanilla creme filling" width="1200" height="900" loading="lazy"/></div><div class="menu-body"><div class="menu-title-row"><h3>Sandwich Cookies</h3><span class="menu-price">$5 each</span></div><div class="menu-spec">Minimum 6 · six for $30</div><p class="menu-desc">Chocolate chip with vanilla creme or Nutella spread, or peanut butter with peanut butter creme.</p><a class="menu-cta" href="/sandwich-cookies/">Choose sandwich cookies <span aria-hidden="true">→</span></a></div></article><article class="menu-item"><div class="menu-media"><span class="course-num">04</span><img src="/assets/cake.webp" alt="Chocolate chip cookie cake with piped frosting" width="1200" height="1200" loading="lazy"/></div><div class="menu-body"><div class="menu-title-row"><h3>Cookie Cakes</h3><span class="menu-price">From $35</span></div><div class="menu-spec">12, 14, or 16 inches</div><p class="menu-desc">A cookie at the center of the celebration. Compare standard and gourmet cake prices.</p><a class="menu-cta" href="/cookie-cakes/">Compare cake sizes <span aria-hidden="true">→</span></a></div></article></div><details class="cake-matrix"><summary>Cookie cake size & price guide <span aria-hidden="true">+</span></summary><div class="table-wrap"><table class="matrix-table"><caption>Standard and gourmet cookie cakes</caption><thead><tr><th scope="col">Size</th><th scope="col">Standard</th><th scope="col">Gourmet</th></tr></thead><tbody>{cakes.map(c=><tr><th scope="row">{c.size} inches</th><td class="price-col">${c.standard}</td><td class="price-col">${c.gourmet}</td></tr>)}</tbody></table></div><p class="small">Tell us your guest count and we’ll help confirm a size. Flavors and finishing details are confirmed with your order.</p></details></section>
+<section class="flavor-board" id="flavors"><div class="container"><span class="eyebrow">03 / Flavor story</span><h2>Familiar favorites. <em>Something worth sharing.</em></h2><div class="flavor-columns"><article class="flavor-card"><h3>Sharing trays</h3><span class="flavor-sub">36 cookies · $50 per tray</span><ul class="tasting-list"><li><span class="tasting-name">Peanut Butter</span></li><li><span class="tasting-name">Oatmeal Raisin</span></li><li><span class="tasting-name">Snickerdoodle</span></li></ul><a class="text-link" href="/cookies/">Explore tray flavors →</a></article><article class="flavor-card"><h3>Stuffed</h3><span class="flavor-sub">$5 each · minimum 6</span><ul class="tasting-list">{stuffed.map(name=><li><span class="tasting-name">{name}</span></li>)}</ul><a class="text-link" href="/stuffed-cookies/">Explore stuffed cookies →</a></article><article class="flavor-card"><h3>For the occasion</h3><span class="flavor-sub">Made to order</span><ul class="tasting-list"><li><span class="tasting-name">Cookie cakes</span><span class="tasting-note">From $35</span></li><li><span class="tasting-name">Logo & photo cookies</span><span class="tasting-note">$5 each · minimum 12</span></li><li><span class="tasting-name">Corporate boxes</span><span class="tasting-note">From $10 per box · minimum 10</span></li></ul><a class="text-link" href="/order/">Plan your occasion →</a></article></div></div></section>
+<section class="section container" id="delivery"><div class="section-header"><div><span class="eyebrow">04 / Close to home</span><h2>A little closer to homemade, <em>Sun City Center.</em></h2></div><p>Planning coffee with friends, a club gathering, or a treat for visiting family? Home is Cookie offers made-to-order cookies for Sun City Center, with delivery arranged around your confirmed order.</p></div><div class="local-panel"><div><h3>Nearby treats. Arranged around you.</h3><p>Regular delivery is $10 with a $20 minimum order. Contact us to confirm your address and date. Corporate delivery is quoted separately.</p></div><a class="btn btn-primary" href="/sun-city-center-cookie-delivery/">Sun City Center delivery →</a></div></section>
+<section class="section container" id="about"><div class="section-header"><div><span class="eyebrow">05 / The baker</span><h2>It started in <em>her grandmother’s kitchen.</em></h2></div><p>LaTasha began baking with her grandmother. She adapted her grandmother’s chocolate cookie recipe into the cornerstone of Home is Cookie, carrying forward the pleasure of something homemade.</p></div><div class="story-detail"><Photo src="grogu-kitchen" alt="Grogu from Star Wars beside a KitchenAid mixer and a bowl of green frosting in the Home is Cookie kitchen" class="story-image" width={1200} height={1034} caption="A little Star Wars company while the green frosting comes together."/><div><h3>Made from scratch. Baked to order.</h3><p>Today, every order is made from scratch and baked to order in Ruskin. LaTasha’s goal is to bring the experience of homemade cookies back to people’s tables.</p><a class="btn btn-outline" href="/our-story/">Meet LaTasha</a></div></div></section>
+<section class="section container" id="gallery"><div class="section-header"><div><span class="eyebrow">06 / From our kitchen</span><h2>Made here. <em>Shared with you.</em></h2></div><a class="btn btn-outline" href="/gallery/">Explore the gallery</a></div><div class="gallery-preview">{gallery.slice(1,4).map(item=><a class="stage-card" href="/gallery/" aria-label={item.caption}><Photo src={item.src} alt={item.alt} width={item.width||1200} height={item.height||1200}/></a>)}</div></section>
+<Steps/>
+<section class="section container" id="faq"><div class="faq-grid"><div><span class="eyebrow">08 / Your questions</span><h2>Everything you need to know <em>before your order.</em></h2><a class="text-link" href="/ordering-delivery/">All ordering questions →</a></div><FAQ items={previewFaqs}/></div></section>
+</Layout>
